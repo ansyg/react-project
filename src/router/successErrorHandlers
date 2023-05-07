@@ -1,0 +1,36 @@
+const errorHandler = (error) => {
+  //console.log('errors kk ',error.response.data.errors);
+
+  const errorCodes = [500, 400, 401, 403, 404, 405, 409, 422];
+
+  if (errorCodes.includes(error.response)) {
+    console.log("show errors here", error.response);
+  }
+
+  return Promise.reject({ ...error });
+};
+
+const successHandler = (response) => {
+  switch (response.config.method) {
+    case "put":
+    case "post":
+    case "delete":
+      // //sweetAlerts Segment
+      // sweetAlert.icon = 'success';
+      // sweetAlert.title = 'Successful...';
+      // sweetAlert.html = `<h3 style="color:green">${response?.data?.message} .</h3>`;
+
+      // if (response.data.message) {
+      //     store.state.SweetAlert.sweetAlerts = {};//resets keys of Sweet alerts
+      //     store.state.SweetAlert.sweetAlerts = sweetAlert;//sets keys after reset
+
+      // }
+      console.log("success", response.data.message);
+  }
+
+  //store.state.SweetAlert.sweetAlerts = {};
+
+  return response;
+};
+
+export { successHandler, errorHandler };

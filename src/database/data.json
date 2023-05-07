@@ -1,0 +1,39 @@
+{
+    "data": [
+        {
+            "name": "Kudra Limoi",
+            "age": 12,
+            "gender": "Female",
+            "behaviour": "Good at singing",
+            "id": 1
+        },
+        {
+            "name": "Jgeme Nola",
+            "age": 18,
+            "gender": "Male",
+            "behaviour": "Good at Running and Singing",
+            "id": 2
+        },
+        {
+            "name": "Jonathan Mlira",
+            "age": 14,
+            "gender": "Male",
+            "behaviour": "Good at Running and Singing and Writting",
+            "id": 3
+        },
+        {
+            "name": "Gerson Gervase",
+            "age": 14,
+            "gender": "Male",
+            "behaviour": "Good at  Maths, Physics and Chemistry",
+            "id": 4
+        },
+        {
+            "name": "4G Haouw ",
+            "age": 14,
+            "gender": "Female",
+            "behaviour": "Good at  Maths, Physics and Chemistry, and Singing",
+            "id": 5
+        }
+    ]
+}
