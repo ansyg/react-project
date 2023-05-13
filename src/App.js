@@ -1,12 +1,13 @@
 
-import './router/interceptor'
-import Routes from './router/router'
+
+import AppHome from './components/layout/AppHome';
+
 
 function App() {
 
   return (
 
-    <Routes />
+    <AppHome />
   );
 }
 

@@ -1,19 +1,63 @@
 
-import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 // import useFetch from '../../custom-hooks/useFetch';
 import useFetchApiData from "../../custom-hooks/useFetchApiData";
 // import {userService } from "../users/services"
+import { DataTable, Column, Button } from '../shared/prime-react-components'
+import React from 'react';
+import { Link } from "react-router-dom";
+
 
 const UserApiData = ({ title }) => {
     const { items: lists, errors: error, loading: isLoading } = useFetchApiData('/data', '', 'data')
+    const columns = [
+        {
+            field: 'index', header: 'No',
+
+            body: (rowData) => {
+                return lists.indexOf(rowData) + 1;
+            },
+        },
+        { field: 'name', header: 'Name' },
+        { field: 'gender', header: 'Gender' },
+        { field: 'age', header: 'Age' },
+        {
+            field: 'action', header: 'Action',
+
+            body: (rowData) => {
+                return (
+                    <Link to={`users/${rowData.id}`}>
+                        <Button label='View User Data' />
+                    </Link>
+
+
+
+                )
+
+            },
+        }
+    ]
 
 
 
     return (
-        <div className='flex flex-wrap'>
+        <>
             <h2>{error}</h2>
             {isLoading && <div> Page is Loading Here</div>}
             <h2>{!isLoading && !error && title}</h2>
+
+            <div className="card">
+                <DataTable value={lists} tableStyle={{ minWidth: '50rem' }}>
+
+                    {columns.map((col, i) => (
+
+
+                        <Column key={col.field} field={col.field} header={col.header} body={col.body} />
+                    ))}
+
+
+
+                </DataTable>
+            </div>
             {lists && lists.map((item, index) => (
 
                 <div className="blog-preview" key={item.id}>
@@ -35,7 +79,7 @@ const UserApiData = ({ title }) => {
             ))
             }
 
-        </div>
+        </>
 
     );
 }
