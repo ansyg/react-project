@@ -42,6 +42,8 @@ export const menus = [
                     {
                         label: 'Option 2',
                         key: 'setting:2',
+                        icon: 'pi pi-user',
+
                     },
                 ],
             },

@@ -25,7 +25,7 @@ const UserApiData = ({ title }) => {
 
             body: (rowData) => {
                 return (
-                    <Link to={`users/${rowData.id}`}>
+                    <Link to={`/users/${rowData.id}`}>
                         <Button label='View User Data' />
                     </Link>
 
