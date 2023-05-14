@@ -1,0 +1,28 @@
+.App{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh ;
+
+}
+.SideBarAppContent{
+    display:flex;
+    flex:1;
+    /* background-color: blue; */
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.SideBarMenu{
+    height: 100%;
+
+
+}
+
+.SideBarMenuVertical{
+    height: 100%;
+}
+.ant-space-item{
+    height: 100%;
+
+}

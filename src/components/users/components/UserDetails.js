@@ -1,8 +1,8 @@
 
 import { Link, useParams } from "react-router-dom";
-import useFetchApiData from "../custom-hooks/useFetchApiData";
+import useFetchApiData from "../../../custom-hooks/useFetchApiData";
 
-import { Card, Button } from './shared/prime-react-components'
+import { Card, Button } from '../../shared/prime-react-components'
 
 
 const UserDetails = ({ title }) => {

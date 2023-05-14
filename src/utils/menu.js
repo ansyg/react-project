@@ -35,7 +35,7 @@ export const menus = [
                 children: [
                     {
                         label: 'List Users',
-                        key: 'user-management/users',
+                        key: '/user-management/users',
                         icon: <UserAddOutlined />,
 
                     },
